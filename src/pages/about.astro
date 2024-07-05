@@ -1,0 +1,31 @@
+---
+import aboutImg from "@/assets/about-astro.png";
+import PageLayout from "@/layouts/Base.astro";
+import { Image } from "astro:assets";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "About",
+};
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">About</h1>
+		<p>
+
+		</p>
+		<p></p>
+		<ul class="list-inside list-disc">
+		</ul>
+		<p>
+			Shoot me a note on <a
+				aria-label="github repository"
+				class="cactus-link inline-block"
+				href="https://t.me/bigsky7"
+				rel="noopener noreferrer"
+				target="_blank">telegram</a
+			> I'm always happy to collaborate!
+		</p>
+	</div>
+</PageLayout>
