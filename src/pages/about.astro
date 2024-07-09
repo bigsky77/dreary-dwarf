@@ -7,30 +7,49 @@ const meta = {
 	description: "",
 	title: "About",
 };
+
+const cactusTech: { desc: string; href: string; title: string }[] = [
+	{
+		desc: "Research Engineer and Founder",
+		href: "https://x.com/bigsky_7",
+		title: "Simon",
+	},
+];
 ---
 
 <PageLayout meta={meta}>
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 		<p>
-        My name is Simon.  I'm a research-engineer focused on zero knowledge cryptography.
-        My current research interests center on Low-Degree Tests, List Decoding, and STARKs.
-        <br>
-        <br>
-        Previously, I worked on GPU hardware accleration for Ingonyama, received grants from Starkware and Mina Protocol, and contributed to Index Coop DAO.
-        Before crypto, I studied philosophy and finance, and served as an infantry captain in the US Marine Corps.
-		</p>
-		<p></p>
-		<ul class="list-inside list-disc">
-		</ul>
+        We are a research and development team focused on zero knowledge cryptography.
 		<p>
-			Shoot me a note on <a
+			Shoot us a note on <a
 				aria-label="github repository"
 				class="cactus-link inline-block"
 				href="https://t.me/bigsky7"
 				rel="noopener noreferrer"
 				target="_blank">telegram</a
-			> I'm always happy to collaborate!
+			>, we're always happy to collaborate!
 		</p>
 	</div>
+		<p class="mb-8">
+		<h2 class="title mb-4 text-xl">Team</h2>
+		<dl class="space-y-4">
+			{
+				cactusTech.map(({ desc, href, title }) => (
+					<div class="flex flex-col gap-2 sm:flex-row">
+						<dt>
+							<span class="flex">
+								<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
+									{title}
+								</a>
+								:
+							</span>
+						</dt>
+						<dd>{desc}</dd>
+					</div>
+				))
+			}
+		</dl>
+        </p>
 </PageLayout>
