@@ -2,7 +2,7 @@
 title: "FRI: Low-Degree Test (3/5)"
 description: "This post is purely for testing if the css is correct for the title on the page"
 publishDate: "22 June 2024"
-tags: ["low-degree testing"]
+tags: ["low-degree testing", "FRI"]
 ---
 
 # FRI proof of proximity
@@ -57,3 +57,11 @@ The above codewords enable us to calculate $f_i(Y) = f_E(Y) + \alpha \cdot f_O(Y
    
    for every $i = 1,..,r$ by quering the values of $p_{i-1}$ over the coset $x_{i-1} \cdot ker \; \pi_i$
    
+### REF
+
+[H22] Ulrich Haböck. "A summary on the FRI low degree test". *Cryptology ePrint Archive*, Report 2022/1216. 2022. [https://eprint.iacr.org/2022/1216.pdf](https://eprint.iacr.org/2022/1216.pdf)
+
+[VIT] Vitalik Buterin. "STARKs, part 2: Thank goodness for FRI". Vitalik's blog, 2017. [https://vitalik.eth.limo/general/2017/11/22/starks_part_2.html](https://vitalik.eth.limo/general/2017/11/22/starks_part_2.html)
+
+[ASZ] Alan Szepieniec. "Anatomy of STARKs: FRI". 2020. [https://aszepieniec.github.io/stark-anatomy/fri](https://aszepieniec.github.io/stark-anatomy/fri)
+

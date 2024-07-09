@@ -2,12 +2,13 @@
 title: "Proximity Is What You Want (1/5)"
 description: "This post is purely for testing if the css is correct for the title on the page"
 publishDate: "19 June 2024"
-tags: ["low-degree testing"]
+tags: ["low-degree testing", "IOP"]
 ---
 
 # Proximity Is What You Want: *Low-Degree Testing for Reed-Solomon Codes*
 
 *Thanks to Giacomo Fenzi for helpful review and feedback.*
+*Full HackMD note can be found [here](https://hackmd.io/IUO7OMrKSQu5Zoigwb6kWQ?view#STIR-proof-of-proximity)*
 
 Reed-Solomon(RS) codes are an important tool within computer science.  The deep history of these codes covers over fifty years of real-world applications.  In many ways, they are the fundamental building block for how data is stored and transferred in the digital era.
 
@@ -93,4 +94,12 @@ For an IOPP with a relation $\mathcal{R} =\{(\mathbb{x},\mathbb{w})\}$ and a tup
     {Pr \atop p_1,..,p_k}  \left[ V^{\mathbb{w}, \pi_1,..,\pi_k}(\mathbb{x}, p_1,..,p_k) = 1  \; \Bigg| \;  \begin{align} \; \pi_1 \leftarrow \tilde{P}(\mathbb{x}, \mathbb{w}) \\... \\ \pi_k \leftarrow \tilde{P}(\mathbb{x}, \mathbb{w}) \end{align}  \right] \le \mathbb{B}(\delta)
     $$
 
+### REF
 
+[ACFY24] Gal Arnon, Alessandro Chiesa, Giacomo Fenzi, and Eylon Yogev. "STIR: Reed–Solomon proximity testing with fewer queries". *Cryptology ePrint Archive*, Report 2024/390. 2024. [https://eprint.iacr.org/2024/390](https://eprint.iacr.org/2024/390)
+
+[BCIKS20] Eli Ben-Sasson, Dan Carmon, Yuval Ishai, Swastik Kopparty, and Shubhangi Saraf. "Proximity gaps for Reed-Solomon codes". In *Proceedings of the 61st Annual Symposium on Foundations of Computer Science (FOCS 2020)*, 2020. [https://eprint.iacr.org/2020/654](https://eprint.iacr.org/2020/654)
+
+[BGKS20] Eli Ben-Sasson, Lior Goldberg, Swastik Kopparty, and Shubhangi Saraf. "DEEP-FRI: Sampling Outside the Box Improves Soundness". In: *Proceedings of the 11th Innovations in Theoretical Computer Science Conference (ITCS 2020)*. 2020, 5:1–5:32. [https://eprint.iacr.org/2019/336.pdf](https://eprint.iacr.org/2019/336.pdf)
+
+[BBHR18b] Eli Ben-Sasson, Iddo Bentov, Ynon Horesh, and Michael Riabzev. "Fast Reed-Solomon Interactive Oracle Proofs of Proximity". In *Proceedings of the 45th International Colloquium on Automata, Languages, and Programming (ICALP 2018)*, 2018. [https://drops.dagstuhl.de/storage/00lipics/lipics-vol107-icalp2018/LIPIcs.ICALP.2018.14/LIPIcs.ICALP.2018.14.pdf](https://drops.dagstuhl.de/storage/00lipics/lipics-vol107-icalp2018/LIPIcs.ICALP.2018.14/LIPIcs.ICALP.2018.14.pdf)

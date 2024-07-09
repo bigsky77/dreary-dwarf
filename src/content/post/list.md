@@ -2,7 +2,7 @@
 title: "List-Decoding (5/5)"
 description: "This post is purely for testing if the css is correct for the title on the page"
 publishDate: "24 June 2024"
-tags: ["low-degree testing"]
+tags: ["List Decoding", "Algorithms"]
 draft: true
 ---
 
@@ -14,7 +14,7 @@ List-decoding seeks to find the optimal solution for these trade-offs by outputt
 
 See [Gur07] and [Gur04] for an depth exploration of list-decoding. 
 
-#### List Decoding
+## List Decoding
 
 Say we have two messages $m_1$ and $m_2$ which we encode using $E(m_1)$.  Assuming a minimum distance $d$,  we transmit this message and the channel distorts the message with $d/2$-errors which distorts $E(m_1)$ into $r$ which is exactly in between $E(m_1)$ and $E(m_2)$.  Now we have no way of determining whether $m_1$ or $m_2$ is the correct message. 
 
@@ -43,3 +43,9 @@ $$err^*(d, p, \delta, m) := {(m - 1) \cdot d^2 \over \mathbb{F}\cdot (2 \cdot mi
 ##### Sudan
 
 ##### Guruswami-Sudan
+
+## REF
+
+[Gur07] Venkatesan Guruswami. "Algorithmic results in list decoding". In *Foundations and Trends in Theoretical Computer Science*, volume 2(2), 2007. [https://www.cs.cmu.edu/~venkatg/pubs/papers/listdecoding-NOW.pdf](https://www.cs.cmu.edu/~venkatg/pubs/papers/listdecoding-NOW.pdf)
+
+[Gur04] Venkatesan Guruswami. "List decoding of error-correcting codes". In *Lecture Notes in Computer Science*, no. 3282, Springer, 2004. [https://www.cs.cmu.edu/~venkatg/pubs/papers/frozen.pdf](https://www.cs.cmu.edu/~venkatg/pubs/papers/frozen.pdf)

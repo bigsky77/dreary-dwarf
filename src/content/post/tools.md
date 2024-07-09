@@ -1,6 +1,6 @@
 ---
 title: "Tools for Reed-Solomon Codes (2/5)"
-description: "This post is purely for testing if the css is correct for the title on the page"
+description: "post is purely for testing if the css is correct for the title on the page"
 publishDate: "21 June 2024"
 tags: ["low-degree testing"]
 ---
@@ -150,3 +150,8 @@ $PolyQuotient(\hat{f}, S)(X)
 
 *Where $\hat{Ans} \in \mathbb{F}^{<|S|}[X]$ is the unique non-zero polynomial with $\hat{Ans}(X) = Ans(x)$ for every $x \in S$.*
 
+### REF
+
+[ACFY24] Gal Arnon, Alessandro Chiesa, Giacomo Fenzi, and Eylon Yogev. "STIR: Reed–Solomon proximity testing with fewer queries". *Cryptology ePrint Archive*, Report 2024/390. 2024. [https://eprint.iacr.org/2024/390](https://eprint.iacr.org/2024/390)
+
+[H22] Ulrich Haböck. "A summary on the FRI low degree test". *Cryptology ePrint Archive*, Report 2022/1216. 2022. [https://eprint.iacr.org/2022/1216.pdf](https://eprint.iacr.org/2022/1216.pdf)
