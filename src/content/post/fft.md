@@ -1,6 +1,6 @@
 ---
 title: "A (somewhat) gentle introduction to the FFT"
-description: "This post is purely for testing if the css is correct for the title on the page"
+description: "fft"
 publishDate: "10 July 2024"
 tags: ["fft"]
 draft: true

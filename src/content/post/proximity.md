@@ -1,6 +1,6 @@
 ---
 title: "Proximity Is What You Want (1/5)"
-description: "This post is purely for testing if the css is correct for the title on the page"
+description: "Proximity Is What You Want"
 publishDate: "19 June 2024"
 tags: ["low-degree testing", "IOP"]
 ---

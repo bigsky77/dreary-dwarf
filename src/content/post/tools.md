@@ -1,6 +1,6 @@
 ---
 title: "Tools for Reed-Solomon Codes (2/5)"
-description: "post is purely for testing if the css is correct for the title on the page"
+description: " Tools for Reed-Solomon Codes"
 publishDate: "21 June 2024"
 tags: ["low-degree testing"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "FRI: Low-Degree Test (3/5)"
-description: "This post is purely for testing if the css is correct for the title on the page"
+description: "FRI: Low-Degree Test"
 publishDate: "22 June 2024"
 tags: ["low-degree testing", "FRI"]
 ---

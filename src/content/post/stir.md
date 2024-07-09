@@ -1,6 +1,6 @@
 ---
 title: "STIR: Proof of Proximity (4/5)"
-description: "This post is purely for testing if the css is correct for the title on the page"
+description: "STIR: Proof of Proximity "
 publishDate: "23 June 2024"
 tags: ["low-degree testing"]
 ---

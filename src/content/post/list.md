@@ -1,6 +1,6 @@
 ---
 title: "List-Decoding (5/5)"
-description: "This post is purely for testing if the css is correct for the title on the page"
+description: "List-Decoding "
 publishDate: "24 June 2024"
 tags: ["List Decoding", "Algorithms"]
 draft: true
