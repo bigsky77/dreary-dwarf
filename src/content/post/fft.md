@@ -125,7 +125,7 @@ We will see this same principle applied again and again in zero knowledge crypto
 
 ## Theorem
 
-Given a polynomial $p(x)$ of $d = \mathbb{N}$, assuming $d$ is a power of 2, we use a divide and conquer algorithm to recursivley split the polynomial.
+Given a polynomial $p(x)$ of $d \in \mathbb{N}$, assuming $d$ is a power of 2, we use a divide and conquer algorithm to recursivley split the polynomial.
 
 $$
 p(X) = p_e(X^2) + x \cdot p_o(X^2)
