@@ -3,7 +3,7 @@ title: "Sumcheck: The Queen of Algorithms"
 description: "Sumcheck: The queen of Algorithms"
 publishDate: "24 July 2024"
 tags: ["sumcheck", "algorithms", "IOP"]
-draft: true 
+draft: false 
 ---
 
 ### Overview:
