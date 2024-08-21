@@ -3,8 +3,10 @@ title: "List-Decoding (5/5)"
 description: "List-Decoding "
 publishDate: "24 June 2024"
 tags: ["List Decoding", "Algorithms"]
-draft: true
+draft: false
 ---
+
+This is a draft of my notes on List-Decoding.  Because this topic touches heavily on computational complexity, as well as information and coding theory, readers should consider consider this pages as very much a work in progress.
 
 # List Decoding
 

@@ -21,35 +21,16 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 		<p>
-        We are a research and development team focused on zero knowledge cryptography.
-		<p>
-			Shoot us a note on <a
-				aria-label="github repository"
-				class="cactus-link inline-block"
-				href="https://t.me/bigsky7"
-				rel="noopener noreferrer"
-				target="_blank">telegram</a
-			>, we're always happy to collaborate!
+			My name is Simon, I am a researcher and developer focused on zero knowledge cryptography.
+			<p>
+				Shoot me a note on telegram <a
+					aria-label="github repository"
+					class="cactus-link inline-block"
+					href="https://t.me/bigsky7"
+					rel="noopener noreferrer"
+					target="_blank">telegram</a
+				>, I'm always happy to collaborate!
+			</p>
 		</p>
 	</div>
-		<p class="mb-8">
-		<h2 class="title mb-4 text-xl">Team</h2>
-		<dl class="space-y-4">
-			{
-				cactusTech.map(({ desc, href, title }) => (
-					<div class="flex flex-col gap-2 sm:flex-row">
-						<dt>
-							<span class="flex">
-								<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
-									{title}
-								</a>
-								:
-							</span>
-						</dt>
-						<dd>{desc}</dd>
-					</div>
-				))
-			}
-		</dl>
-        </p>
 </PageLayout>
