@@ -153,16 +153,6 @@ Finally, $\mathcal{V}$ chooses a random $r_n \in \mathbb{F}$ and evaluates $f(r_
 
 If $f_v(r_v)= f(r_1,...,r_v)$, $\mathcal{V}$ accepts. 
 
-Let's use our toy example to show how this final check would work.  Becuase the final polynomial is $f_3$ that is what $\mathcal{P}$ will send to $\mathcal{V}$.
-
-We then choose a random $r_v \in \mathbb{F}$ (which will remain as $r_v = 4$ for our example).
-
-$$
-f(4,4,4) = f_3(4) \\
- (4 \cdot (4 + 4) - (4 \cdot 4) = (16 - 12 \cdot 4) \\ 
- (-32) \ mod \ 10 = (-32) \ mod \ 10
-$$
-
 And so our Sumcheck passed.  We now know enough to accept the claim from $\mathcal{P}$ that $H$ was computed correctly. 
 
 ## Protocol Costs
