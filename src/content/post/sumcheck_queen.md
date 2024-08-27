@@ -124,15 +124,15 @@ This round passes.
 Becuase we are working with three variables we will cycle through one more time.
 
 $$
-f(4, 4, X_3) =4  \cdot (4 + X_3) - (4 \cdot X_3) = 16 - 12X_3 \\
+f(4, 4, X_3) =4  \cdot (4 + X_3) - (4 \cdot X_3) = 16 \\
 $$
 
 Which results in $f_3 = 16 - 12X_3$.
 
 $$
 f_2(r_2) \ mod \ 10 = f_3(0) + f_3(1) \ mod \ 10 \\
-(4 \cdot 4 + 4) \ mod \ 10= (16 - 12 \cdot 0) + (16 -12 \cdot 1)\ mod \ 10 \\
-(20) \ mod \ 10 = (20) \ mod \ 10
+(7 \cdot 4 + 4) \ mod \ 10= 16 + 16  \\
+(32) \ mod \ 10 = (32) \ mod \ 10
 $$
 
 All checks pass and we can proceed to the final round!
