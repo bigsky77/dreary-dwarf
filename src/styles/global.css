@@ -18,12 +18,13 @@
 
 	:root[data-theme="dark"] {
 		color-scheme: dark;
-		--theme-bg: 210deg 6% 12%;
-		--theme-link: 330deg 49% 67%;
-		--theme-text: 220deg 3% 79%;
-		--theme-accent: 159deg 64% 45%;
-		--theme-accent-2: 0deg 0% 93%;
-		--theme-quote: 102deg 100% 86%;
+		--theme-bg: 231deg 15% 18%;      /* #282a36 - Background */
+		--theme-link: 326deg 100% 74%;   /* #ff79c6 - Pink */
+		--theme-text: 60deg 30% 96%;     /* #f8f8f2 - Foreground */
+		--theme-accent: 135deg 94% 65%;  /* #50fa7b - Green */
+		--theme-accent: 326deg 100% 74%; /* #ff79c6 - Pink */
+		--theme-accent-2: 191deg 97% 77%;/* #8be9fd - Cyan */
+		--theme-quote: 65deg 92% 76%;    /* #f1fa8c - Yellow */
 	}
 
 	html {
