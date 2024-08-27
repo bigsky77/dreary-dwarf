@@ -41,13 +41,13 @@ f(0, 0, 0) = 0 \cdot (0 + 0) - (0 \cdot 0) = 0 \\
 f(1, 0, 0) = 1 \cdot (0 + 0) - (0 \cdot 0) = 0 \\
 f(0, 1, 0) = 0 \cdot (1 + 0) - (1 \cdot 0) = 0 \\
 f(0, 0, 1) = 0 \cdot (0 + 1) - (0 \cdot 1) = 0 \\ 
-f(0, 1, 1) = 0 \cdot (1 + 1) - (1 \cdot 1) = 0 \\ 
+f(0, 1, 1) = 0 \cdot (1 + 1) - (1 \cdot 1) = -1 \\ 
 f(1, 1, 0) = 1 \cdot (1 + 0) - (1 \cdot 0) = 1 \\ 
 f(1, 0, 1) = 1 \cdot (0 + 1) - (0 \cdot 1) = 1 \\
 f(1, 1, 1) = 1 \cdot (1 + 1) - (1 \cdot 1) = 1 \\
 $$
 
-Summing the values, we see that $f_0 = 3$.
+Summing the values, we see that $f_0 = 2$.
 
 Now that we have the basic of the algorithm set up we are ready to start the actual IOP.
 
@@ -62,23 +62,19 @@ $$
 $\mathcal{V}$ checks that $f_1$ is of degree at most $d \le deg_1(d)$ and that $H = f_1(0) + f_1(1)$.  The verifier does this by computing a partial sum of $f_1$ leaving the first variable free.
 
 $$
-f(X_1, 0, 0) =X_1  \cdot (0 + 0) - (0 \cdot 0) = 0   \\
-f(X_1, 0, 0) =X_1  \cdot (0 + 0) - (0 \cdot 0) = 0   \\
-f(X_1, 1, 0) =X_1  \cdot (1 + 0) - (1 \cdot 0) = 0   \\
-f(X_1, 0, 1) =X_1  \cdot (0 + 1) - (0 \cdot 1) = 0   \\ 
-f(X_1, 1, 1) =X_1  \cdot (1 + 1) - (1 \cdot 1) = 0   \\ 
-f(X_1, 1, 0) =X_1  \cdot (1 + 0) - (1 \cdot 0) = X_1 \\ 
-f(X_1, 0, 1) =X_1  \cdot (0 + 1) - (0 \cdot 1) = X_1 \\
-f(X_1, 1, 1) =X_1  \cdot (1 + 1) - (1 \cdot 1) = X_1 \\
+f(X_1, 0, 0) = X_1 · (0 + 0) - (0 · 0) = 0           \\
+f(X_1, 1, 0) = X_1 · (1 + 0) - (1 · 0) = X_1         \\
+f(X_1, 0, 1) = X_1 · (0 + 1) - (0 · 1) = X_1         \\
+f(X_1, 1, 1) = X_1 · (1 + 1) - (1 · 1) = 2X_1 - 1    \\
 $$
 
-Leaving us with $f_1(X_1) = 3X_1$.
+Leaving us with $f_1(X_1) = 4X_1 - 1$.
 
 #### Round 2:
 
 Now $\mathcal{V}$ checks that $f_0 = f_1(0) + f_1(1)$.
 
-Becuase we know that $f_0 = 3$ and $f_1(X1) = 3X_1$, the verifier is able to confirm that $3 = 3(0) + 3(1)$.
+Becuase we know that $f_0 = 2$ and $f_1(X1) = 4X_1 - 1$, the verifier is able to confirm that $2 = 4(0) -1 + 4(1) - 1$.
 
 #### Round 3:
 
@@ -110,17 +106,17 @@ In our example round, $X_1$ is replaced by $r_1$ and the next variable $x_2$ is 
 
 $$
 f(4, X_2, 0) =4  \cdot (X_2 + 0) - (X_2 \cdot 0) = 4X_2 \\
-f(4, X_2, 1) =4  \cdot (X_2 + 1) - (X_2 \cdot 1) = 4 \\ 
+f(4, X_2, 1) =4  \cdot (X_2 + 1) - (X_2 \cdot 1) = 3X_2 + 4 \\ 
 $$
 
-This results in $f_2(X_2) = 4X_2 + 4$. 
+This results in $f_2(X_2) = 7X_2 + 4$. 
 
 Which we then check against:
 
 $$
 f_1(r_1) \ mod \ 10 = f_2(0) + f_2(1) \ mod \ 10 \\
-(3 \cdot 4) \ mod \ 10 = (4 \cdot 0 + 4 + 4 \cdot 1 + 4) \ mod \ 10 \\
-(12) \ mod \ 10 = (12) \ mod \ 10 \\
+(4(4) - 1) \ mod \ 10 = (7 \cdot 0 + 4 + 7 \cdot 1 + 4) \ mod \ 10 \\
+(15) \ mod \ 10 = (15) \ mod \ 10 \\
 $$
 
 This round passes.
