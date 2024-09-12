@@ -3,6 +3,7 @@ import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
+import { Code } from "astro:components";
 
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
@@ -41,39 +42,16 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	<section>
 		<h1 class="title mb-6">Exploring the Frontier of Zero-Knowledge</h1>
 		<p class="mb-4">
-			<i
-				>Every few years, a technology emerges that changes everything...
-                </i
-			>
+		<i>
+		  Every few years, a technology emerges that changes everything...
+    </i>
 
 			<br />
 			<br />
-
-            I believe <b>Zero Knowledge Cryptography</b> is one of these technologies, and will become our most powerful tool for building a new digital reality.
-
-			<br />
-			<br />
-
-			When I imagine this new digital reality, my starting point is to take the internet of today, and describe it’s diametrical opposite.
-            Where the current web is convoluted, slow, and degraded, I imagine one of beauty, speed,
-            and power. In place of over-exposure and crowding, I see privacy and individuality. And where today's internet seeks to enslave, mine will declare uncompromising freedom!			<br />
-
-            <br />
-            Zero Knowledge Proofs are the key to unlocking this revolutionary future.			<br /><br />
-
-            But this ideal future won't materialize on its own. It demands action today. To make this vision a reality, I focus on three critical stages:
-
-            <br />
-            <br />
-
-			1) <b>Collaborate</b>: Engage in cutting-edge research to expand the realm of possibility. <br />
-			2) <b>Design</b>: Create sophisticated algorithms that bring theoretical concepts to life.<br />
-			3) <b>Implement</b>: Develop the protocols that transform the very fabric of the internet. <br />
+			<b>Psycho Virtual</b> is a research initiative dedicated to accelerating the adoption of Zero Knowledge Cryptography.
+            We leverage advanced mathematical and algorithmic techniques to build reliable, scalable, and efficient applications at the forefront of modern cryptography.
 
 			<br />
-
-            By following these stages and by mastering the mathematics and algorithms which power modern cryptography,
-            I believe we can build a digital world that respects privacy while enabling unprecedented levels of trust.
 		</p>
 		<SocialList />
 	</section>
