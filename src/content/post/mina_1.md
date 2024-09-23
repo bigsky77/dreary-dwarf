@@ -10,28 +10,28 @@ draft: true
 
 ## 1. Introduction 
 
-Interactive proofs are transforming cryptography and blockchains. These mathematical techniques serve as the foundation for advanced systems like Mina. Mina uses sophisticated proof systems to create a compact blockchain. At just 22kB, Mina enables trustless verification on common devices such as phones and web browsers. This feat stems from the clever application of interactive proofs and their modern variants.
-
-This series will explore the fundamentals of interactive proofs and their practical applications. We'll examine how Mina uses these concepts to enable zero-knowledge programmability, enhance privacy, and improve scalability.  Our goal is to bridge the gap between abstract mathematics and real-world implementations. Whether you're well-versed in cryptography or new to the field, we aim to provide insights into how these mathematical ideas shape modern blockchain design.
+This series will explore the fundamentals of interactive proofs and their practical applications. With a focus on how cutting-edge protocols like Mina leverages these concepts to achieve scalability, privacy, and efficient verification. Our goal is to bridge the gap between abstract mathematics and real-world implementations. Whether you're well-versed in cryptography or new to the field, we aim to provide insights into how these mathematical ideas shape modern blockchain design.
 
 ## 2. Foundations of Interactive Proofs 
 
-Interactive proofs involve two parties: a prover $P$ and a verifier $V$. The prover aims to convince the verifier of a statement's truth through a series of interactions. Let $(P, V)$ be an interactive proof system for a language $L$.
-Key Properties: Completeness and Soundness
-Two fundamental properties define the strength of an interactive proof system:
+Interactive proofs(IP) enable a prover to convince a verifier of a statement’s truth through structured interactions. These proofs are key to building efficient, scalable systems like Mina, where verification can be performed on lightweight devices without sacrificing security.
 
-Completeness: If the statement is true, an honest prover should convince an honest verifier with certainty. Formally:
+These proofs involve two parties: a prover $P$ and a verifier $V$. The prover aims to convince the verifier of a statement's truth through a series of interactions. Let $(P, V)$ be an interactive proof system for a language $L$.  Two fundamental properties define the strength of an interactive proof system:
+
+**Completeness:** If the prover is honest and the statement is true, the verifier should always be convinced of the statement’s correctness. This ensures that the proof system behaves as expected when both parties follow the rules.
+
 $$
 \forall{x} \in L \ P_{r_p, r_v}[<P_{r_p}(x, r_p), V_{r_v}(x, r_v)> = 1] = 1
 $$
 Here, $r_p$ and $r_v$ represent the random inputs to the prover and verifier respectively.
-Soundness: If the statement is false, no prover (even a dishonest one) should be able to convince the verifier, except with small probability. Formally:
+
+**Soundness**: If the statement is false, no prover (even a dishonest one) should be able to convince the verifier, except with small probability. Formally:
 $$
 \forall{x} \notin L \ \tilde{P_r}[<\tilde{P}, V(x, r)=1>] = 1/2
 $$
 $\tilde{P}$ represents any potential prover strategy, including dishonest ones, and $r$ is the verifier's random input.
 
-Prover-Verifier Model and Basic Protocols
+#### Prover-Verifier Model and Basic Protocols
 The structure of interactive proof systems can be represented as:
 $$
 \Pr_{r_1,\ldots,r_n}\left[V^{\pi_1,\ldots,\pi_n}(x,r_1,\ldots,r_n) = 1 \Bigg|
@@ -44,8 +44,6 @@ $$
 \right]
 $$
 This representation shows the probability of the verifier accepting after $n$ rounds of interaction, where $\pi_i$ is the prover's message in round $i$, and $r_i$ is the verifier's random challenge in round $i$.
-
-[Previous content remains the same]
 
 ### Example: Graph Isomorphism
 
@@ -238,3 +236,15 @@ Mina protocol stands as a testament to the real-world impact of these innovation
 In future posts, we'll delve deeper into how Mina harnesses each of these innovations. We'll examine the specific role that PLONK and recursive SNARKs play in Mina's architecture, explore the intricacies of zkApp development, and investigate how Mina's unique approach addresses common blockchain scalability and privacy challenges.
 
 As we continue this exploration, we'll see how the theoretical foundations laid by interactive proofs have blossomed into a technology that's not just revolutionizing blockchains, but potentially reshaping our understanding of trust, privacy, and verification in the digital age. The story of Mina is, in many ways, the story of turning mathematical theory into practical reality—a journey that's only just beginning.
+
+## Reference
+
+[CHMVW] Chiesa, A., Hu, Y., Maller, M., Mishra, P., Vesely, N., Ward, N.: Marlin: Preprocessing zkSNARKs with universal and updatable SRS.
+
+[G] Groth, J.: On the size of pairing-based non-interactive arguments.
+
+[MBKM] Maller, M., Bowe, S., Kohlweiss, M., Meiklejohn, S.: Sonic: Zero-knowledge SNARKs from linear-size universal and updateable structured reference strings.
+
+[GWC] Gabizon, A., Williamson, Z.J., Ciobotaru, O.: PLONK: Permutations over Lagrange-bases for oecumenical noninteractive arguments of knowledge.
+
+[PGHR] Parno, B., Gentry, C., Howell, J., Raykova, M.: Pinocchio: Nearly practical verifiable computation.
