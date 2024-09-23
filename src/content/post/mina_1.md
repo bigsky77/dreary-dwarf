@@ -12,6 +12,8 @@ draft: false
 
 This series will explore the fundamentals of interactive proofs and their practical applications. With a focus on how cutting-edge protocols like Mina leverages these concepts to achieve scalability, privacy, and efficient verification. Our goal is to bridge the gap between abstract mathematics and real-world implementations. Whether you're well-versed in cryptography or new to the field, we aim to provide insights into how these mathematical ideas shape modern blockchain design.
 
+![Prover](./prover_verifier.gif)
+
 ## 2. Foundations of Interactive Proofs 
 
 Interactive proofs(IP) enable a prover to convince a verifier of a statement’s truth through structured interactions. These proofs are key to building efficient, scalable systems like Mina, where verification can be performed on lightweight devices without sacrificing security.
