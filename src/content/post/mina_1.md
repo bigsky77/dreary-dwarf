@@ -3,7 +3,7 @@ title: "Introduction to Interactive Proofs and Mina"
 description: "Introduction to Interactive Proofs and Mina"
 publishDate: "23 September 2024"
 tags: ["mina", "recursion", "IVC", "arithmetization", "plonk", "folding"]
-draft: true 
+draft: false 
 ---
 
 *This work is supported by a grant from the Mina Foundation*
