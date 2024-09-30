@@ -3,7 +3,7 @@ title: "Introduction to Gates and Circuits"
 description: "Introduction to Gates and Circuits"
 publishDate: "25 September 2024"
 tags: ["mina", "recursion", "IVC", "arithmetization", "plonk", "folding"]
-draft: false 
+draft: true 
 ---
 
 *This work is supported by a grant from the Mina Foundation*
