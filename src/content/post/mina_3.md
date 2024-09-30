@@ -111,6 +111,8 @@ This congruence ensures that the polynomial equation holds at all points in $H$.
 
 ## 3. Interpolation of Rows and Columns in PLONK
 
+![Plonk2](./plonk2.jpg)
+
 ### Mapping Rows to the Evaluation Domain
 
 In the PLONK protocol, the arithmetic circuit is represented in a tabular form, where each **row** corresponds to a gate, and the **columns** represent different wires (inputs and outputs) and selector values (which define the gate operations). To efficiently work with this tabular representation in the polynomial domain, we associate each row with a unique element from a finite field, forming the **evaluation domain**.
