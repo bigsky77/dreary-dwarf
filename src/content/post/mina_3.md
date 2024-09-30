@@ -10,6 +10,8 @@ draft: false
 
 One of the biggest drivers of the current ZK revolution is the evolution of arithmetization and constraint systems.  This evolution enables more complex computation to be encoded in zero-knowledge.  Over the past decade, almost every major leap forward in ZK is directly tracable to advances in arithmetization.  One of the biggest jumps forward came from the introduction of the Plonk proof system in 2018, which introduced many novel techniques for build highly efficient ad scalable zkSNARKS.  Plonk is the backbone for many modern protocols, specifically for our use case Mina. 
 
+![Plonk](./plonk.jpg)
+
 ## 1. PLONK-Specific Gate and Constraint Mechanisms
 
 Plonkish arithmetization introduces a significant advancement in representing computational circuits for zero-knowledge proofs. Unlike R1CS, which relies on fixed constraint types, PLONK uses **selector polynomials** to define customizable gates, providing a flexible and efficient way to encode complex operations tailored to specific computational needs.
@@ -21,6 +23,7 @@ Key features of Plonkish arithmetization include:
 - **Scalability and Efficiency**: Transforming computational constraints into polynomial equations over the Lagrange basis and using the vanishing polynomial $Z_H(X)$ leverages efficient algebraic operations and Fast Fourier Transforms (FFTs), enhancing scalability.
 
 - **Succinctness and Universality**: PLONK enables the creation of succinct proofs that are independent of circuit size through polynomial commitment schemes and permutation arguments.
+
 
 ### General Form
 
