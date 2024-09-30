@@ -214,6 +214,8 @@ $$
 
 In PLONK arithmetization, each of the selector vectors $q_{\{\}}$ and witness vectors $w_L, w_R, w_O$ is interpolated into its own polynomial. Thus, **each column in the circuit's tabular representation corresponds to a polynomial**.
 
+![Plonk3](./plonk3.png)
+
 ### Columns as Polynomials
 
 - **Selector Polynomials**: Each selector vector $q_L, q_R, q_M, q_O, q_C$ is interpolated into a selector polynomial $q_L(X), q_R(X), q_M(X), q_O(X), q_C(X)$.
