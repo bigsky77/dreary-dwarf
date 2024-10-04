@@ -28,6 +28,9 @@
       ],
       "@/site-config": [
         "src/site.config.ts"
+      ],
+      "@/*": [
+        "./src/*"
       ]
     }
   },

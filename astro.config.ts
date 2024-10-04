@@ -14,6 +14,9 @@ import { remarkReadingTime } from "./src/utils/remark-reading-time";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import vercel from '@astrojs/vercel/serverless';
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,6 +31,7 @@ export default defineConfig({
 		}),
 		sitemap(),
 		mdx(),
+		react(),
 	],
 	markdown: {
 		rehypePlugins: [

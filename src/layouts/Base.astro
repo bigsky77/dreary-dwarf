@@ -37,36 +37,53 @@ const {
         line-height: 1.6;
         color: var(--text-color);
         background-color: var(--bg-color);
+        background-image: url('../content/post/plonk2.jpg');
+        background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+        overflow: hidden; /* Prevent body scrolling */
     }
 
-    body {
-        background-image: url('../content/post/plonk2.jpg');
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        padding: 0;
+        z-index: -1;
     }
 
-    .layout-container {
-        position: absolute;
-        top: 45%;
-        left: 25%;
-        transform: translate(0, -50%);
-        width: 55%;
-        max-height: 85vh;
+    .content-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto; /* Enable scrolling for content */
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
     }
 
     .center-content {
         background-color: rgba(20, 20, 30, 0.9);
         padding: 40px;
-        overflow-y: auto;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        width: 100%;
+        max-width: 800px;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        overflow-y: auto;
     }
 
     /* Header styles */
@@ -159,9 +176,10 @@ const {
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-        .layout-container {
-            left: 5%;
-            width: 90%;
+        .center-content {
+            padding: 20px;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
         }
 
         body {
@@ -180,14 +198,14 @@ const {
 	<body>
 		<ThemeProvider />
 		<SkipLink />
-		<div class="layout-container">
-			<div class="center-content">
-				<Header />
-				<main id="main">
-					<slot />
-				</main>
-				<Footer />
-			</div>
-		</div>
+        <div class="content-container">
+            <div class="center-content">
+                <Header />
+                <main id="main">
+                    <slot />
+                </main>
+                <Footer />
+            </div>
+        </div>
 	</body>
 </html>
