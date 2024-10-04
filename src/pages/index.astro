@@ -5,6 +5,7 @@ import { getAllPosts, sortMDByDate } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { Code } from "astro:components";
 
+
 const MAX_POSTS = 10;
 const allPosts = await getAllPosts();
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
@@ -51,9 +52,8 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 			<b>Psycho Virtual</b> is a research initiative dedicated to accelerating the adoption of Zero Knowledge Cryptography.
 			<br />
 			<br />
-            We leverage advanced mathematics and algorithms to build fast, scalable, and efficient applications at the forefront of modern cryptography.
+            We leverage advanced mathematics and algorithms to build fast, scalable, and efficient applications at the forefront of modern technology.
 		</p>
-		<SocialList />
 	</section>
 	<section aria-label="Blog post list" class="mt-16">
 		<h2 class="title mb-4 text-xl">Posts</h2>
