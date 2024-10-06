@@ -1,9 +1,9 @@
 ---
-title: "Low-Degree Test, Vanishing Conditions, and Consistency"
-description: "Introduction to Gates and Circuits"
+title: "Low-Degree Tests, Vanishing Conditions, and Consistency Checks"
+description: "Outline of the core mathematic tools for cryptography, error correction, and computational complexity"
 publishDate: "4 October 2024"
-tags: ["linear functions", "error-correcting codes", "property testing", "PCP"]
-draft: true
+tags: ["low-degree test", "vanishing conditions", "consistency check", "probabilistic algorithms", "error-correcting codes", "PCP theorem", "cryptography", "computational complexity"]
+draft: false 
 ---
 # Low-Degree Test, Vanishing Conditions, and Consistency Check
 
