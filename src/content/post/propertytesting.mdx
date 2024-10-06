@@ -1,0 +1,132 @@
+---
+title: "Property Testing"
+description: "Introduction to Gates and Circuits"
+publishDate: "4 October 2024"
+tags: ["linear functions", "error-correcting codes", "property testing", "PCP"]
+draft: true
+---
+
+# Constructing a Probabilistically Checkable Proof for Polynomial Verification
+
+In computational complexity theory, **Probabilistically Checkable Proofs (PCPs)** are a powerful tool that allows a verifier to check the correctness of a proof by examining only a small portion of it. This method leverages randomness and the properties of polynomials over finite fields to efficiently verify complex statements with high confidence. In this blog post, we explore how to construct a PCP to verify that a given polynomial satisfies a specific equation, using auxiliary polynomials to facilitate the verification process.
+
+## Problem Setup
+
+Let's define the components of our problem:
+
+- **Finite Field $\mathbb{F}$**: A field with a finite number of elements.
+- **Subset $H \subseteq \mathbb{F}$**: Typically a small subset or subfield of $\mathbb{F}$.
+- **Positive Integer $m$**: The number of variables in our polynomials.
+- **Polynomial $P$**: A multivariate polynomial $P: \mathbb{F}^{3m+4} \to \mathbb{F}$.
+- **Polynomial $A$**: The main polynomial $A: \mathbb{F}^m \to \mathbb{F}$ that we aim to verify, supposed to be of degree at most $d$.
+
+Our goal is to verify that $A$ satisfies the equation:
+
+$$
+P\big(x, z, y, \tau, A(x), A(y), A(z)\big) = 0,
+$$
+
+for all $x, y, z \in H^m$ and $\tau \in \{0,1\}^3 \subseteq H$.
+
+We define an auxiliary polynomial $A_0: \mathbb{F}^{3m+1} \rightarrow \mathbb{F}$ by:
+
+$$
+A_0(x, y, z, \tau) = P\big(x, z, y, \tau, A(x), A(y), A(z)\big).
+$$
+
+Our aim is to verify that $A_0$ vanishes on $H^{3m+1}$, i.e., $A_0(x, y, z, \tau) = 0$ whenever $x, y, z \in H^m$ and $\tau \in H$.
+
+To assist in this verification, we introduce a sequence of auxiliary polynomials $\{A_i\}$ for $i = 1, \ldots, 3m+1$, where each $A_i: \mathbb{F}^{3m+1} \to \mathbb{F}$ is supposed to vanish whenever its last $3m+1 - i$ variables are in $H$. Specifically, $A_i$ should vanish on $\mathbb{F}^i \times H^{3m+1 - i}$.
+
+## Constructing the PCP
+
+### Prover's Strategy
+
+The **prover** constructs and provides oracle access to the following polynomials:
+
+- **Main Polynomial $A$**: $A: \mathbb{F}^m \to \mathbb{F}$.
+- **Auxiliary Polynomial $A_0$**: As defined above.
+- **Sequence of Auxiliary Polynomials $\{A_i\}$**: For $i = 1, \ldots, 3m+1$, each $A_i: \mathbb{F}^{3m+1} \to \mathbb{F}$ with degree at most $D$, where $D$ is determined by the degrees of $A$ and $P$.
+
+These polynomials are claimed to satisfy the required properties, including the vanishing conditions on specific subsets of their domains.
+
+### Verifier's Protocol
+
+The **verifier's** goal is to efficiently check that the polynomials satisfy the specified conditions. The verifier uses randomness to perform the following checks:
+
+1. **Consistency Check between $A$ and $A_0$**:
+
+   - Randomly select $x, y, z \in \mathbb{F}^m$ and $\tau \in \mathbb{F}$.
+   - Query $A(x)$, $A(y)$, $A(z)$, and $A_0(x, y, z, \tau)$.
+   - Verify that:
+     $$
+     A_0(x, y, z, \tau) = P\big(x, z, y, \tau, A(x), A(y), A(z)\big).
+     $$
+
+2. **Vanishing Checks for $A_0$ and $A_i$**:
+
+   - **For $A_0$**:
+     - Randomly select $x, y, z \in H^m$ and $\tau \in H$.
+     - Query $A_0(x, y, z, \tau)$ and verify that $A_0(x, y, z, \tau) = 0$.
+
+   - **For each $A_i$**:
+     - For $i = 1$ to $3m+1$:
+       - Randomly select $a_1, \ldots, a_i \in \mathbb{F}$ and $h_{i+1}, \ldots, h_{3m+1} \in H$.
+       - Query $A_i(a_1, \ldots, a_i, h_{i+1}, \ldots, h_{3m+1})$.
+       - Verify that $A_i(a_1, \ldots, a_i, h_{i+1}, \ldots, h_{3m+1}) = 0$.
+
+3. **Low-Degree Testing for Each Polynomial**:
+
+   - For $A$, $A_0$, and each $A_i$:
+     - Perform a low-degree test to ensure the polynomial's degree does not exceed the claimed bound $D$.
+     - This involves selecting random lines in the polynomial's domain and checking that the restriction of the polynomial to these lines is a univariate polynomial of degree at most $D$.
+
+### Soundness and Completeness
+
+- **Completeness**: If the prover's polynomials satisfy all the conditions, the verifier will accept the proof with high probability.
+- **Soundness**: If any condition is not satisfied, the verifier will reject the proof with high probability, based on the properties of polynomials over finite fields and the randomness of the checks.
+
+## Technical Details
+
+### Low-Degree Testing
+
+To verify that a polynomial is of low degree without evaluating it everywhere, the verifier performs the following:
+
+- **Random Line Selection**:
+  - Choose a random affine line $L$ in the polynomial's domain.
+- **Evaluation**:
+  - Evaluate the polynomial at several points along $L$.
+- **Degree Verification**:
+  - Check that the evaluations correspond to a univariate polynomial of degree at most $D$.
+
+### Verifying Vanishing Conditions
+
+The verifier checks that each $A_i$ vanishes on $\mathbb{F}^i \times H^{3m+1 - i}$:
+
+- **Random Sampling**:
+  - Randomly select $a_1, \ldots, a_i \in \mathbb{F}$ and $h_{i+1}, \ldots, h_{3m+1} \in H$.
+- **Evaluation**:
+  - Query $A_i$ at these points.
+- **Verification**:
+  - Confirm that $A_i(a_1, \ldots, a_i, h_{i+1}, \ldots, h_{3m+1}) = 0$.
+
+### Consistency Checks
+
+To ensure $A_0$ is consistent with $A$ and $P$:
+
+- **Random Sampling**:
+  - Randomly select $x, y, z \in \mathbb{F}^m$ and $\tau \in \mathbb{F}$.
+- **Evaluation**:
+  - Query the necessary polynomials.
+- **Verification**:
+  - Check the equation $A_0(x, y, z, \tau) = P\big(x, z, y, \tau, A(x), A(y), A(z)\big)$.
+
+## Conclusion
+
+By constructing auxiliary polynomials and leveraging probabilistic verification techniques, we can efficiently verify complex polynomial equations within a PCP framework. This approach reduces the verification of global properties to local checks, enabling the verifier to detect inconsistencies with high probability while examining only a small portion of the proof.
+
+The use of low-degree tests, vanishing condition checks, and consistency verifications ensures both efficiency and robustness in the verification process. This method is significant in areas like computational complexity and cryptography, where efficient and reliable proof verification is critical.
+
+---
+
+**Note**: This overview simplifies many intricate details involved in the actual construction and verification process. For a comprehensive understanding, one should study the underlying mathematical principles, such as the Schwartz-Zippel lemma, low-degree testing algorithms, and the specific properties of finite fields used in PCP constructions.
