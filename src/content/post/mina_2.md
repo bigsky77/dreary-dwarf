@@ -3,7 +3,7 @@ title: "Introduction to Gates and Circuits"
 description: "Introduction to Gates and Circuits"
 publishDate: "25 September 2024"
 tags: ["mina", "recursion", "IVC", "arithmetization", "plonk", "folding"]
-draft: true 
+draft: false 
 ---
 
 *This work is supported by a grant from the Mina Foundation*
@@ -57,7 +57,7 @@ A **constraint system** translates the computational logic of an arithmetic circ
 
 #### **3.a.1. Matrix Representation of Constraints**
 
-Consider an arithmetic circuit with multiple gates, each enforcing specific constraints. These constraints can be organized into matrices to systematically represent the relationships between variables and operations.
+  * [ ] Consider an arithmetic circuit with multiple gates, each enforcing specific constraints. These constraints can be organized into matrices to systematically represent the relationships between variables and operations.
 
 - **Variables Vector ($\mathbf{v}$):** A vector containing all the variables in the circuit, including inputs, outputs, and intermediate values.
 

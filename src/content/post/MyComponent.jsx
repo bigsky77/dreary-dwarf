@@ -92,7 +92,7 @@ const FiniteFieldLinearFunctionHamming = () => {
 
   return (
     <div className="p-4 bg-gray-800 rounded-lg shadow-lg text-gray-200">
-      <h2 className="text-2xl font-bold mb-4 text-gray-100">Linear Functions in Finite Field with Hamming Distance</h2>
+      <p className="text-2xl font-bold mb-4 text-gray-100">Linear Functions in Finite Field with Hamming Distance</p>
       <div className="mb-4">
         <Label htmlFor="fieldSize" className="text-gray-300">Field Size (p):</Label>
         <Select value={fieldSize.toString()} onValueChange={(value) => setFieldSize(Number(value))}>
