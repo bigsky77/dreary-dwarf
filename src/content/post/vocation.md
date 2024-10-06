@@ -50,6 +50,8 @@ draft: false
 
 **Sage:** Exactly. The ability to embrace this complexity and apparent contradiction might itself be a hallmark of the emerging cognitive paradigm we've been discussing. It's about integrating various aspects of our psyche – from the transcendent to the mundane.
 
+![Richard](./richardmille.png)
+
 ## V. Charting the Path Forward
 
 **Seeker:** So where do we go from here? How do we apply these insights?
