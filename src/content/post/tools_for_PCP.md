@@ -1,5 +1,5 @@
 ---
-title: "Tools for Probabilistic Checkable Proofs"
+title: "Tools for Probabilistic Checkable Proofs    "
 description: "Low-Degree Tests, Vanishing Conditions, and Consistency Checks"
 publishDate: "4 October 2024"
 tags: ["low-degree test", "vanishing conditions", "consistency check", "probabilistic algorithms", "error-correcting codes", "PCP theorem", "cryptography", "computational complexity"]
