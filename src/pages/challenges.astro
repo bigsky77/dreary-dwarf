@@ -1,0 +1,68 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "Psycho Virtual Research Challenges",
+	title: "Challenges",
+};
+
+const challenges = [
+	{
+		title: "Plonk Permutation CheckSoundness ",
+		description: "In the permutation check of the Plonk protocol, the prover constructs a grand product polynomial $Z(X)$ using randomness introduced via challenge elements from the verifier. Analyze how this randomness affects the soundness of the permutation check. Is it possible for an adversarial prover to manipulate the permutation without detection? Provide a rigorous analysis of potential vulnerabilities and why the protocol remains sound."
+	},
+];
+---
+
+<PageLayout meta={meta}>
+	<div class="space-y-6">
+		<h1 class="title">Research Challenges</h1>
+		<p>
+			Psycho Virtual presents a series of open research challenges in the field of zero-knowledge proofs and cryptography. We invite researchers, cryptographers, and enthusiasts to explore these questions and contribute to advancing the state of the art in these areas.
+		</p>
+		<div class="space-y-4">
+			{challenges.map((challenge, index) => (
+				<div class="challenge-item bg-accent-2 rounded-lg p-6" data-index={index}>
+					<h2 class="text-xl font-semibold mb-2 cursor-pointer text-accent">{challenge.title}</h2>
+					<p class="challenge-description hidden text-text" set:html={challenge.description}></p>
+				</div>
+			))}
+		</div>
+		<p class="mt-8">
+			If you're interested in tackling these challenges or discussing potential solutions, please reach out to us on
+			<a
+				aria-label="telegram group"
+				class="cactus-link inline-block"
+				href="https://t.me/+dyWKxFrVcMk2NjYx"
+				rel="noopener noreferrer"
+				target="_blank"
+			>
+				Telegram
+			</a>.
+		</p>
+	</div>
+</PageLayout>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const challengeItems = document.querySelectorAll('.challenge-item');
+		challengeItems.forEach(item => {
+			const title = item.querySelector('h2');
+			const description = item.querySelector('.challenge-description');
+			title.addEventListener('click', () => {
+				description.classList.toggle('hidden');
+			});
+		});
+	});
+</script>
+
+<style>
+	/* Any additional styles specific to this component can go here */
+	.challenge-item {
+		transition: all 0.3s ease;
+	}
+	.challenge-item:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+</style>
