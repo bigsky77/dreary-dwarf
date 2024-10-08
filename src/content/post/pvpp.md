@@ -12,7 +12,7 @@ In his book "Introduction to Property Testing" Oded Goldreich provides a wonderf
 
 In computational complexity theory, **Probabilistically Checkable Proofs (PCPs)** are a powerful tool that allows a verifier to check the correctness of a proof by examining only a small portion of it. This method leverages randomness and the properties of polynomials over finite fields to efficiently verify complex statements with high confidence. In this blog post, we explore how to construct a PCP to verify that a given polynomial satisfies a specific equation, using auxiliary polynomials to facilitate the verification process.
 
-# Introduction to the PVPP problem 
+# Introduction to the Partially Vanishing Polynomial Problem 
 
 The Partially Vanishing Polynomial Problem (PVPP) involves verifying whether a given multivariate polynomial $P$ satisfies a specific vanishing condition when composed with another polynomial $A$ over a finite field $\mathbb{F}$. Specifically, the goal is to check if:
 $$
