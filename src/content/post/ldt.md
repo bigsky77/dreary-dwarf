@@ -8,7 +8,7 @@ draft: false
 
 *This work is supported by a grant from the Mina Foundation*
 
-The Low-Degree Test(LDT) is a fundamental tool in theoretical computer science. We use the LDT to break down complex mathematic structures (multivariate polynomials) into simpler parts. These smaller components enable us to recursively infer information about complex global structures.  These tests appear again and again throughout zero-knowledge cryptography. 
+The Low-Degree Test (LDT) is a cornerstone in theoretical computer science, particularly in the realms of cryptography and property testing. It allows us to verify whether a function behaves like a low-degree polynomial without fully examining it, offering a powerful tool for simplifying and understanding complex mathematical structures. LDTs are foundational in many zero-knowledge protocols, where they ensure that computations can be efficiently verified with minimal information leakage.
 
 This post draws from the Alessandro Chiesa's lecture slides[^1], Oded Goldreich's lecture notes[^2], and the *"Robust characterization of polynomials with applications to program testing"*[^3] paper where these techniques were first discussed.
 
