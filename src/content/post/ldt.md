@@ -290,7 +290,7 @@ This equality implies that $g$ satisfies a specific linear recurrence relation, 
 
 By the above lemmas, we have shown that if $P$ passes the low-degree test with error probability $\delta \leq \delta_0$, then there exists a degree-$d$ polynomial $g$ such that $P$ and $g$ agree on at least $1 - 2\delta$ fraction of the inputs. Moreover, $g$ satisfies the recurrence relation $\sum_{i=0}^{d+1} c_i g(\alpha + i h) = 0$ for all $\alpha, h \in \mathbb{F_p}^m$, confirming its degree bound.
 
-[^1]: A. Chiesa *Lecture Notes on Low Degree Tests*
-[^2]: O. Goldreich *Lecture Notes on Low Degree Tests* 
+[^1]: A. Chiesa *Lecture Notes on Low Degree Tests* https://ic-people.epfl.ch/~achiesa/fopp-course.html
+[^2]: O. Goldreich *Lecture Notes on Low Degree Tests*  https://www.wisdom.weizmann.ac.il/~oded/PDF/pt-low.pdf
 [^3]: R. Rubinfeld and M. Sudan. *Robust characterization of polynomials with applications to program testing*. SIAM Journal on Computing, 25(2), pages 252–271, 1996.
 
