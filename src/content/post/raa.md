@@ -92,7 +92,7 @@ A           M_π2        A           M_π1        F_r    x
 The RAA code encoding process involves a series of matrix operations applied to the input vector $x$. The process starts with repeating each input bit, followed by two rounds of permutation and accumulation, resulting in the final codeword $RAA_{\pi_1,\pi_2}(x)$.
 
 
-# Critical Points and Distance Analysis
+## Critical Points and Distance Analysis
 
 The analysis of RAA codes relies on studying the function $f$ which describes
 the distance properties of the RAA codes:
@@ -111,7 +111,7 @@ $$\frac{\partial f}{\partial \beta} = 0 \Leftrightarrow \delta = \frac{1}{2} \pm
 
 The maximum value of $f$ over admissible $(\alpha,\beta,\rho)$ determines the achievable rate-distance tradeoff. For a target distance $\delta$, we require $\max f(\alpha,\beta,\delta) < 0$ over the admissible region.
 
-# Puncturing
+## Puncturing
 
 For punctured RAA codes, we analyze:
 
