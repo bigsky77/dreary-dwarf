@@ -1,5 +1,5 @@
 ---
-title: "The Coming Wave: Cryptography and Sovereignty"
+title: "Cryptography and Sovereignty"
 description: "Exploring the revolutionary potential of zero-knowledge cryptography and its impact on the future of information security"
 publishDate: "18 October 2024"
 tags: ["zero-knowledge cryptography", "information theory", "digital revolution", "privacy", "security", "value capture", "artificial intelligence"]
@@ -52,7 +52,7 @@ This isn't a distant ideal—it's an unfolding reality. Here's how we move forwa
 
 - **Collective Empowerment**: As more people regain control over their data, we cultivate a culture of empowerment. This collective shift drives societal progress and fosters innovation from all corners of the globe.
 
-## Conclusion
+## The Coming Wave
 
 Zero-knowledge cryptography is more than a breakthrough—it's a movement toward a more just and empowered digital society. It's the key to unlocking a future where we are not passive consumers but active architects of our digital experiences.
 
