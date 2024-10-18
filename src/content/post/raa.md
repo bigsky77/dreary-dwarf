@@ -173,6 +173,4 @@ process of code interleaving and lifting, which are important techniques for
 improving the efficiency and performance of error-correcting codes in various
 applications.
 
-## Reference
-
 [^1]: Martijn Brehm, Binyi Chen, Ben Fisch, Nicolas Resch, Ron D. Rothblum, and Hadas Zeilberger. "Blaze: Fast SNARKs from Interleaved RAA Codes." Cryptology ePrint Archive, Paper 2024/1609, 2024. https://eprint.iacr.org/2024/1609
