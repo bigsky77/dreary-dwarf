@@ -40,7 +40,7 @@ At the heart of this transformation is a deep resonance with our innate desires:
 
 - **Community**: We seek meaningful connections and collaboration. With privacy assured, we can engage more openly and authentically, strengthening the social fabric.
 
-- **Equity**: A fair society values each person's contributions. By returning value to individuals, we promote a more balanced and inclusive digital ecosystem.
+- **Fairness**: A fair society values each person's contributions. By returning value to individuals, we promote a more balanced and inclusive digital ecosystem.
 
 ## The Path Forward
 
@@ -48,7 +48,7 @@ This isn't a distant ideal—it's an unfolding reality. Here's how we move forwa
 
 - **Seamless Integration into Daily Life**: Zero-knowledge technologies become standard features of devices and platforms. Users benefit from enhanced security and privacy without needing specialized knowledge.
 
-- **Ethical Innovation and Responsible AI**: With access to vast amounts of privacy-preserved data, artificial intelligence can advance responsibly. We unlock new frontiers in medicine, science, and technology while upholding the highest ethical standards.
+- **1000x AI**: With access to vast amounts of privacy-preserved data, artificial intelligence can advance responsibly. We unlock new frontiers in medicine, science, and technology while upholding the highest ethical standards.
 
 - **Collective Empowerment**: As more people regain control over their data, we cultivate a culture of empowerment. This collective shift drives societal progress and fosters innovation from all corners of the globe.
 
