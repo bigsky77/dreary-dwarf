@@ -51,11 +51,23 @@ The sets ${i \mid x_i \ne (c_x)_i}$, ${i \mid y_i \ne (c_y)_i}$, and ${i \mid \a
 
 ## Foldable Codes
 
-In the context of interactive oracle proofs (IOPs) and polynomial commitment schemes, **foldable codes** are linear error-correcting codes that support an operation called *folding*. Folding allows the prover to transform codewords or polynomial evaluations into a compressed form with reduced length or degree while preserving the code's structural properties essential for verification. A code is considered foldable if it enables such transformations without losing the ability to detect and correct errors.
+In the context of interactive oracle proofs (IOPs) and polynomial commitment schemes, **foldable codes** are linear error-correcting codes that support an operation called *folding*. Folding allows the prover to transform codewords or polynomial evaluations into a compressed form with reduced length or degree while preserving the code's structural properties essential for verification. A code is considered foldable if it enables such transformations without losing the ability to detect and correct errors.[^8]
 
-The folding operation involves combining code symbols or polynomial evaluations using randomness supplied by the verifier. This process reduces the complexity of the problem by aggregating information, similar to how folded Reed-Solomon codes group consecutive symbols to form larger alphabet symbols. 
+Foldable linear codes use encoding algorithms denoted as: 
 
-An essential aspect of foldable codes is the **correlated agreement** property. This principle ensures that discrepancies in the folded code correspond to correlated discrepancies in the original code. In other words, if the folded codewords agree (or are close) on certain evaluations, then the original codewords also agree (or are close) on the corresponding components. This property allows the verifier to trust the folded representations and is fundamental in protocols like BaseFold. 
+$$ 
+\{ \text{Enc}_i: \mathbb{F}^{2^i} \to \mathbb{F}^{2^{i+1}} \}_{i=1}^d 
+$$
+
+where each encoding step transforms a message of size $ 2^i $ to one of size $ 2^{i+1} $. These codes are parameterized by vectors $ \{ \vec{t}_{i,L}, \vec{t}_{i,R} \in \mathbb{F}^{2^i} \} $ such that, for all $ i \in [d] $ and for each index $ j $, the vectors satisfy $ \vec{t}_{i,L}[j] \neq \vec{t}_{i,R}[j] $. This property ensures the linear independence of the vectors during the folding process.
+
+The "foldability" of the code refers to the ability to combine two encoded halves (left and right) of the message into a single encoding by folding, as expressed by the equation:
+
+$$
+\text{Enc}_{i+1}(\vec{m}_L || \vec{m}_R) = \text{Enc}_i(\vec{m}_L) + \vec{t}_{i,L} \circ \text{Enc}_i(\vec{m}_R)
+$$
+
+This folding mechanism relies on the fact that the vectors $ \vec{t}_{i,L} $ and $ \vec{t}_{i,R} $ act as evaluation points, and the encodings of the left and right halves are composed based on their coefficient and evaluation forms. Examples of foldable codes include the well-known Reed-Solomon codes.
 
 ## BaseFold
 
@@ -159,3 +171,4 @@ This equation ensures consistency in folding at every round, verifying that the 
 [^4]: Guo, Y., Liu, X., Huang, K., Qu, W., Tao, T., & Zhang, J. (2024). DeepFold: Efficient Multilinear Polynomial Commitment from Reed-Solomon Code and Its Application to Zero-knowledge Proofs. *Cryptology ePrint Archive, Paper 2024/1595*.
 [^5]: Haböck, U. (2024). Basefold in the List Decoding Regime. *Cryptology ePrint Archive, Paper 2024/1571*.
 [^7]: Zhang, Z., Li, W., Guo, Y., Shi, K., Chow, S. S. M., Liu, X., & Dong, J. (2024). Fast RS-IOP Multivariate Polynomial Commitments and Verifiable Secret Sharing. *USENIX Security Symposium*.
+[^8]: Chen, B. https://chancharles92.github.io/slides/BaseFold.pdf
