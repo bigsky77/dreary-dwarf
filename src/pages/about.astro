@@ -21,38 +21,37 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 		<p>
-        Psycho Virtual combines interdisciplinary research with rapid development cycles.
+        Hi, my name is Simon 👋
+
             <br>
             <br>
-            We selectively partner with leading technology companies, protocols, and investors.
+        I'm a computer scientist working at the intersection of theory and practice.
+
+            <br>
+            <br>
+            <b>Theory</b>: information theory, interactive oracle proofs, and mechanism design.
+            <b>Application</b>: AI agents, proof systems, and GPU hardware-acceleration.
+            <br>
+            <br>
+            My work spans both research and implementation. I'm open to collaboration and consulting on projects that push technical boundaries.
             <br>
 			<p>
-				If this sounds interesting send us a note on <a
+				If this sounds interesting send me a note on <a
 					aria-label="github repository"
 					class="cactus-link inline-block"
 					href="https://t.me/+dyWKxFrVcMk2NjYx"
 					rel="noopener noreferrer"
 					target="_blank">telegram</a
+				> or reach out on
+                <a
+					aria-label="github repository"
+					class="cactus-link inline-block"
+					href="https://x.com/bigsky_7"
+					rel="noopener noreferrer"
+					target="_blank">twitter</a
 				>.
 			</p>
 		</p>
-		<h1 class="title">Team</h1>
-		<dl class="space-y-4">
-			{
-				cactusTech.map(({ desc, href, title }) => (
-					<div class="flex flex-col gap-2 sm:flex-row">
-						<dt>
-							<span class="flex">
-								<a class="cactus-link" href={href} rel="noopener noreferrer" target="_blank">
-									{title}
-								</a>
-								:
-							</span>
-						</dt>
-						<dd>{desc}</dd>
-					</div>
-				))
-			}
 		</dl>
 	</div>
 </PageLayout>
