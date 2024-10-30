@@ -6,6 +6,8 @@ tags: ["cryptography", "error-correcting codes", "RAA codes", "polynomial commit
 draft: False 
 ---
 
+*This work is supported by a grant from the Mina Foundation*
+
 ## Introduction 
 
 Polynomial Commitment Schemes (PCS) are fundamental cryptographic primitives in zero-knowledge proofs, built either on elliptic curve cryptography (e.g., KZG construction) or on error-correcting codes with hash functions (e.g., FRI protocol). Elliptic curve-based PCS offer succinct proofs but are computationally intensive, while hash-based PCS are computationally lighter but result in larger proofs.

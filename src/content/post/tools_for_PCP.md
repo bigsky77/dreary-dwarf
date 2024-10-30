@@ -5,6 +5,9 @@ publishDate: "4 October 2024"
 tags: ["low-degree test", "vanishing conditions", "consistency check", "probabilistic algorithms", "error-correcting codes", "PCP theorem", "cryptography", "computational complexity"]
 draft: false 
 ---
+
+*This work is supported by a grant from the Mina Foundation*
+
 # Low-Degree Test, Vanishing Conditions, and Consistency Check
 
 ## Low-Degree Test

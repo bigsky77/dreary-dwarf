@@ -6,6 +6,8 @@ tags: ["zero-knowledge cryptography", "information theory", "digital revolution"
 draft: false 
 ---
 
+*This work is supported by a grant from the Mina Foundation*
+
 ## Introduction
 
 We stand at the threshold of a profound transformation—a moment where technology aligns with our deepest human aspirations. Zero-knowledge cryptography isn't just another technological advancement; it's the cornerstone of a future where individuals command their digital destinies. This is the dawn of an era where every person becomes the master of their own information, heralding a new chapter in human empowerment.

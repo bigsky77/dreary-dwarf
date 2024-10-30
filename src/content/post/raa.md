@@ -6,6 +6,8 @@ tags: ["cryptography", "error-correcting codes", "RAA codes", "polynomial commit
 draft: false
 ---
 
+*This work is supported by a grant from the Mina Foundation*
+
 ## Introduction
 
 Repeat-Accumulate-Accumulate (RAA) codes are a family of error-correcting codes that combine simplicity of encoding with powerful error-correction capabilities. These codes operate by repeating each input bit a fixed number of times, then applying two rounds of permutation and accumulation, resulting in a codeword that can be efficiently encoded and decoded. RAA codes have gained significant attention in cryptography, particularly in the development of efficient polynomial commitment schemes and zero-knowledge proofs, due to their favorable balance between encoding complexity and minimum distance properties.
