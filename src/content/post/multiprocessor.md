@@ -3,7 +3,7 @@ title: "Mathematics for Multi-Processor Architecture: First Sketch"
 description: "Multi-Processor"
 publishDate: "28 October 2024"
 tags: ["Architecture", "Algorithms", "Multi-Processor"]
-draft: True 
+draft: False 
 ---
 
 ## 1. Introduction
