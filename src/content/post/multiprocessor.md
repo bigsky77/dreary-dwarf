@@ -6,6 +6,8 @@ tags: ["Architecture", "Algorithms", "Multi-Processor"]
 draft: False 
 ---
 
+*This work is supported by a grant from the Mina Foundation*
+
 ## 1. Introduction
 Modern computation increasingly exhibits a natural bifurcation between high-level program logic and low-level data manipulation. This separation manifests most prominently in the distinction between CPU and GPU processing, where high-level logical operations occur on traditional processors while massive parallel data transformations are offloaded to specialized hardware. This separation is not merely an engineering solution but likely reflects fundamental properties of information processing at scale.  This property can be seen in many natural processes, where complex data processing and sequential decision making processes are not naturally split.  Think the distinction in the human brain between vision and planning.
 
