@@ -1,5 +1,5 @@
 ---
-title: "The Future of Succinct Blockchains: A Path Forward"
+title: "Succinct Blockchains with Accumulation: A Path Forward"
 description: "Exploring what a truly scalable blockchain architecture might look like"
 publishDate: "2 December 2024"
 tags: ["blockchain", "succinctness", "parallelization", "finality", "scalability", "zero-knowledge proofs", "accumulation schemes"]

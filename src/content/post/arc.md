@@ -1,7 +1,7 @@
 ---
 title: "ARC: Accumulation for Reed-Solomon Codes"
 description: "A deep dive into hash-based accumulation schemes for Reed-Solomon codes"
-publishDate: "30 November 2024"
+publishDate: "28 November 2024"
 tags: ["cryptography", "zero-knowledge proofs", "accumulation schemes", "Reed-Solomon codes", "PCD"]
 draft: False
 ---
