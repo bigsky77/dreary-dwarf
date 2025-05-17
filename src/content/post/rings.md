@@ -3,7 +3,7 @@ title: "Rings with Polynomial Identities"
 description: "Exploring PI-rings and their applications"
 publishDate: "25 March 2025"
 tags: ["algebra", "cryptography", "zero-knowledge", "polynomial identities", "PI-rings"]
-draft: false
+draft: true 
 ---
 
 *This post is part of an ongoing series exploring algebraic structures in modern cryptography*
