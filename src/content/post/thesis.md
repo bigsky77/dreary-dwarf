@@ -3,7 +3,7 @@ title: "The Future of Verified Computation"
 description: "The convergence of blockchain and zero-knowledge tech"
 publishDate: "15 July 2025"
 tags: ["cryptography", "blockchain", "zero-knowledge", "IVC", "AI", "verification"]
-draft: false
+draft: False
 ---
 
 # The Future of Verified Computation: From Blockchain to Zero-Knowledge
